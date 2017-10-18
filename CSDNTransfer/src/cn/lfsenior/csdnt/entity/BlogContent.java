@@ -1,7 +1,7 @@
-package cn.lfsenior.entity;
+package cn.lfsenior.csdnt.entity;
 
-
-import java.sql.Date;
+import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,17 +12,19 @@ import java.util.Set;
  *下午4:08:08
  *
  */
-public class BlogContent {
-	private int contentId;
+public class BlogContent implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2947363339826016143L;
+	private String contentId;
 	private String contentTitle;
-	private Date contentDate;
+	private Timestamp contentDate;
 	private String contentBody;
-	private BlogUser blogUser;
 	private String contentLabel;
 	private String contentVisit;
 	private Set<BlogCategory> blogCategorySet=new HashSet<BlogCategory>();
 	private String contentDescribe;
-
 	
 	
 	public String getContentDescribe() {
@@ -31,10 +33,10 @@ public class BlogContent {
 	public void setContentDescribe(String contentDescribe) {
 		this.contentDescribe = contentDescribe;
 	}
-	public int getContentId() {
+	public String getContentId() {
 		return contentId;
 	}
-	public void setContentId(int contentId) {
+	public void setContentId(String contentId) {
 		this.contentId = contentId;
 	}
 	public String getContentTitle() {
@@ -43,10 +45,10 @@ public class BlogContent {
 	public void setContentTitle(String contentTitle) {
 		this.contentTitle = contentTitle;
 	}
-	public Date getContentDate() {
+	public Timestamp getContentDate() {
 		return contentDate;
 	}
-	public void setContentDate(Date contentDate) {
+	public void setContentDate(Timestamp contentDate) {
 		this.contentDate = contentDate;
 	}
 	public String getContentBody() {
@@ -54,12 +56,6 @@ public class BlogContent {
 	}
 	public void setContentBody(String contentBody) {
 		this.contentBody = contentBody;
-	}
-	public BlogUser getBlogUser() {
-		return blogUser;
-	}
-	public void setBlogUser(BlogUser blogUser) {
-		this.blogUser = blogUser;
 	}
 	public String getContentLabel() {
 		return contentLabel;

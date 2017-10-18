@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-body>
+	<!-- 最大页码路径 -->
+	<maxpagenum>#papelist span</maxpagenum>
+	<!-- 定位文章路径 -->
+	<articleuri>#article_list .article_item .article_title a</articleuri>
+	<!-- 标题节点路径 -->
+	<title>.link_title a</title>
+	<!-- 标签节点路径 -->
+	<labels>.link_categories a</labels>
+	<!-- 时间节点路径 -->
+	<date>.link_postdate</date>
+	<!-- 访问量节点路径 -->
+	<vist>.link_view</vist>
+	<!-- 文章内容路径 -->
+	<article>.article_content</article>
+</xml-body>
